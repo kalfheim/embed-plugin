@@ -4,8 +4,6 @@ use Model;
 
 /**
  * Settings Model
- *
- * @todo Permissions
  */
 class Settings extends Model
 {
