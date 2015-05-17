@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    mode:
+        label: krisawzm.embed::lang.settings.mode.label
+        type: radio
+        default: all
+        options:
+            all: [krisawzm.embed::lang.settings.mode.all]
+            allBut: [krisawzm.embed::lang.settings.mode.allBut]
+            only: [krisawzm.embed::lang.settings.mode.only]
+
+    list:
+        type: text
+        comment: krisawzm.embed::lang.settings.list.comment
+
+    googlemaps_api_key:
+        label: krisawzm.embed::lang.settings.googlemaps_api_key.label
+        type: text
+        comment: krisawzm.embed::lang.settings.googlemaps_api_key.comment
+
+    soundcloud_client_id:
+        label: krisawzm.embed::lang.settings.soundcloud_client_id.label
+        type: text
+        comment: krisawzm.embed::lang.settings.soundcloud_client_id.comment
