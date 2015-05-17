@@ -5,6 +5,8 @@ use Krisawzm\Embed\Models\Settings;
 
 /**
  * Embed Plugin Information File
+ *
+ * @todo Enable responsiveness on more components?
  */
 class Plugin extends PluginBase
 {

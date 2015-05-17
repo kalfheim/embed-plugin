@@ -14,7 +14,7 @@
 
 return [
     'details' => [
-        'name'                  => 'YouTube Player',
+        'name'                  => 'YouTube',
         'description'           => 'Embed a YouTube video.',
     ],
 

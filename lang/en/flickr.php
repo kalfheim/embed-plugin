@@ -14,8 +14,8 @@
 
 return [
     'details' => [
-        'name'                  => 'Flickr Gallery',
-        'description'           => 'Embed a Flickr Gallery.',
+        'name'                  => 'Flickr',
+        'description'           => 'Embed a picture or album on Flickr.',
     ],
 
     'properties' => [

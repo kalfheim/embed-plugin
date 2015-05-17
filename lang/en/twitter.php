@@ -14,7 +14,7 @@
 
 return [
     'details' => [
-        'name'                  => 'Twitter Tweet',
+        'name'                  => 'Twitter',
         'description'           => 'Embed a Twitter Tweet.',
     ],
 

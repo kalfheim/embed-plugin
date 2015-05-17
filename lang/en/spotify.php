@@ -14,7 +14,7 @@
 
 return [
     'details' => [
-        'name'                  => 'Spotify Play Button',
+        'name'                  => 'Spotify',
         'description'           => 'Embed a Spotify Play Button.',
     ],
 

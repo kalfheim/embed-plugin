@@ -24,7 +24,7 @@ class GitHub extends ComponentBase
             'id' => [
                 'title'             => 'krisawzm.embed::github.properties.id.title',
                 'description'       => 'krisawzm.embed::github.properties.id.description',
-                'default'           => '0db0766c46a465bb40e8',
+                'default'           => 'krisawzm/0db0766c46a465bb40e8',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
                 'validationMessage' => 'krisawzm.embed::github.properties.id.validationMessage',

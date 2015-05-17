@@ -14,7 +14,7 @@
 
 return [
     'details' => [
-        'name'                  => 'SoundCloud Player',
+        'name'                  => 'SoundCloud',
         'description'           => 'Embed a SoundCloud track or playlist.',
     ],
 

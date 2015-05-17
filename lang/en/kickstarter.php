@@ -27,7 +27,7 @@ return [
 
         'type' => [
             'title'             => 'Display Type',
-            'description'       => 'RSelect how to display this widget.',
+            'description'       => 'Select how to display this widget.',
         ],
 
         'width' => [

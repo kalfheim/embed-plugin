@@ -14,7 +14,7 @@
 
 return [
     'details' => [
-        'name'                  => 'Imgur Post',
+        'name'                  => 'Imgur',
         'description'           => 'Embed a Imgur image or album.',
     ],
 

@@ -14,7 +14,7 @@
 
 return [
     'details' => [
-        'name'                  => 'Instagram Post',
+        'name'                  => 'Instagram',
         'description'           => 'Embed a Instagram post.',
     ],
 
