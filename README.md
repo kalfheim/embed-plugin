@@ -61,7 +61,7 @@ Property              | Description
 **URL**               | The full Flickr.com URL.
 **Widget Width**      | Width of the widget specified in pixels. **Default:** 640
 **Widget Height**     | Height of the widget specified in pixels. **Default:** 426
-**Responsiveness**    | [Bootstrap-style](http://getbootstrap.com/components/#responsive-embed) 16:9 responsiveness. When enabled, fixed sizing can be ignored. **Default:** False
+**Responsiveness**    | [Click here for details.](#responsiveness) **Default:** False
 
 ### GitHub Gist
 
@@ -163,7 +163,7 @@ Property              | Description
 **Autoplay Audio**    | Automatically play audio. **Default:** False
 **Type**              | How to display the widget. **Options:** `Simple` `Postcard`
 **Size**              | The size of the widget. **Options:** `300px` `480px` `600px`
-**Responsiveness**    | [Bootstrap-style](http://getbootstrap.com/components/#responsive-embed) 16:9 responsiveness. When enabled, fixed sizing can be ignored. **Default:** False
+**Responsiveness**    | [Click here for details.](#responsiveness) **Default:** False
 
 ### Vine
 
@@ -180,7 +180,20 @@ Property              | Description
 **Video**             | Video ID or Vimeo URL copied from the browser address bar.
 **Widget Width**      | Default for **Video**: 360 -- Default for **Card**: 220
 **Widget Height**     | Default for **Video**: 480 -- Default for **Card**: 420
-**Responsiveness**    | [Bootstrap-style](http://getbootstrap.com/components/#responsive-embed) 16:9 responsiveness. When enabled, fixed sizing can be ignored. **Default:** False
+**Responsiveness**    | [Click here for details.](#responsiveness) **Default:** False
+
+## Responsiveness
+
+Some components have a property named `Responsiveness`. This makes the widget responsive -- or fluid.
+
+The way this is done is by wrapping the widget in a `div.embed-responsive` element. If you are using [Twitter Bootstrap](http://getbootstrap.com/), this will work automatically. However, if you are not using Bootstrap, you will have to add some CSS. Check out [this Gist](https://gist.github.com/krisawzm/59337b5806f27bd5f981) for an example of how you can achieve this.
+
+**Options:**
+- `Fixed` - Disables responsiveness and uses size defined with width and height.
+- `4:3` - Enables responsiveness with 4:3 size.
+- `16:9` - Enables responsiveness with 16:9 size.
+
+> **Note**: When responsiveness is enabled, you can skip setting a fixed width and height.
 
 ## Contributing
 

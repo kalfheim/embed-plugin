@@ -29,6 +29,9 @@ return [
         'responsive' => [
             'title'             => 'Responsiveness',
             'description'       => 'Makes the player size fluid. If enabled, ignore fixed sizing.',
+            'fixed'             => 'Fixed size',
+            '4by3'              => '4:3',
+            '16by9'             => '16:9',
         ],
     ],
 ];

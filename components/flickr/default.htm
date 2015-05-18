@@ -1,6 +1,6 @@
 {% if __SELF__.property('responsive') %}
 
-    <div class="embed-responsive embed-responsive-16by9">
+    <div class="embed-responsive embed-responsive-{{ __SELF__.property('responsive') }}">
         <iframe class="embed-responsive-item" src="{{ __SELF__.src }}" frameborder="0" allowfullscreen></iframe>
     </div>
 
