@@ -51,6 +51,7 @@ class Flickr extends ComponentBase
             'responsive' => [
                 'title'             => 'krisawzm.embed::common.properties.responsive.title',
                 'description'       => 'krisawzm.embed::common.properties.responsive.description',
+                'default'           => '0',
                 'type'              => 'dropdown',
                 'options'           => ['0' => 'krisawzm.embed::common.properties.responsive.fixed', '4by3' => 'krisawzm.embed::common.properties.responsive.4by3', '16by9' => 'krisawzm.embed::common.properties.responsive.16by9'],
             ],
