@@ -3,6 +3,10 @@
 # ===================================
 
 fields:
+    hint:
+        type: hint
+        path: $/krisawzm/embed/models/settings/_hint.htm
+
     mode:
         label: krisawzm.embed::lang.settings.mode.label
         type: radio
