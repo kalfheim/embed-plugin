@@ -1,1 +1,11 @@
-<iframe src="{{ __SELF__.src }}" width="{{ __SELF__.property('width') }}" height="{{ __SELF__.property('height') }}" frameborder="0" allowfullscreen></iframe>
+{% if __SELF__.property('responsive') %}
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{ __SELF__.src }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+{% else %}
+
+    <iframe src="{{ __SELF__.src }}" width="{{ __SELF__.property('width') }}" height="{{ __SELF__.property('height') }}" frameborder="0" allowfullscreen></iframe>
+
+{% endif %}

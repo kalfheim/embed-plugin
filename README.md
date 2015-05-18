@@ -61,6 +61,7 @@ Property              | Description
 **URL**               | The full Flickr.com URL.
 **Widget Width**      | Width of the widget specified in pixels. **Default:** 640
 **Widget Height**     | Height of the widget specified in pixels. **Default:** 426
+**Responsiveness**    | [Bootstrap-style](http://getbootstrap.com/components/#responsive-embed) 16:9 responsiveness. When enabled, fixed sizing can be ignored. **Default:** False
 
 ### GitHub Gist
 
@@ -162,6 +163,7 @@ Property              | Description
 **Autoplay Audio**    | Automatically play audio. **Default:** False
 **Type**              | How to display the widget. **Options:** `Simple` `Postcard`
 **Size**              | The size of the widget. **Options:** `300px` `480px` `600px`
+**Responsiveness**    | [Bootstrap-style](http://getbootstrap.com/components/#responsive-embed) 16:9 responsiveness. When enabled, fixed sizing can be ignored. **Default:** False
 
 ### Vine
 
@@ -170,7 +172,6 @@ Property              | Description
 **Vine**              | Vine ID or the full URL. Eg: `https://vine.co/v/id`
 **Widget Width**      | Default for **Video**: 360 -- Default for **Card**: 220
 **Widget Height**     | Default for **Video**: 480 -- Default for **Card**: 420
-**Responsiveness**    | [Bootstrap-style](http://getbootstrap.com/components/#responsive-embed) 16:9 responsiveness. When enabled, fixed sizing can be ignored. **Default:** False
 
 ### YouTube
 

@@ -47,6 +47,13 @@ class Flickr extends ComponentBase
                 'validationPattern' => '^[0-9]+$',
                 'validationMessage' => 'krisawzm.embed::common.properties.height.validationMessage',
             ],
+
+            'responsive' => [
+                'title'             => 'krisawzm.embed::common.properties.responsive.title',
+                'description'       => 'krisawzm.embed::common.properties.responsive.description',
+                'default'           => '0',
+                'type'              => 'checkbox',
+            ],
         ];
     }
 
