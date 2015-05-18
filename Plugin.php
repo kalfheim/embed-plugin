@@ -22,8 +22,9 @@ class Plugin extends PluginBase
         return [
             'name'        => 'krisawzm.embed::lang.plugin.name',
             'description' => 'krisawzm.embed::lang.plugin.description',
-            'author'      => 'Krisawzm',
+            'author'      => 'Kristoffer Alfheim',
             'icon'        => 'icon-link',
+            'homepage'    => 'https://github.com/krisawzm/embed-plugin',
         ];
     }
 
