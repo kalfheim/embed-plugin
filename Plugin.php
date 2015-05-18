@@ -135,9 +135,20 @@ class Plugin extends PluginBase
                 'description' => 'krisawzm.embed::lang.settings_menu.description',
                 'icon'        => 'icon-link',
                 'class'       => 'Krisawzm\Embed\Models\Settings',
+                'permissions' => ['krisawzm.embed.settings'],
                 'keywords'    => 'embed krisawzm',
                 // 'keywords'    => 'embed krisawzm'.implode(' ', $this->componentList),
-            ]
+            ],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function registerPermissions()
+    {
+        return [
+            'krisawzm.embed.settings' => ['label' => 'Manage Embed settings'],
         ];
     }
 }

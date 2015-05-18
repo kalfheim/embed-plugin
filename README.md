@@ -39,6 +39,7 @@ By default every component will be enabled. This is in most cases unnecessary. I
 - [Spotify](#spotify)
 - [Twitter](#twitter)
 - [Vimeo](#vimeo)
+- [Vine](#vine)
 - [YouTube](#youtube)
 
 ## Component Details
@@ -158,6 +159,15 @@ Property              | Description
 Property              | Description
 --------------------- | ---------------------
 **Video**             | Video ID or Vimeo URL copied from the browser address bar.
+**Autoplay Audio**    | Automatically play audio. **Default:** False
+**Type**              | How to display the widget. **Options:** `Simple` `Postcard`
+**Size**              | The size of the widget. **Options:** `300px` `480px` `600px`
+
+### Vine
+
+Property              | Description
+--------------------- | ---------------------
+**Vine**              | Vine ID or the full URL. Eg: `https://vine.co/v/id`
 **Widget Width**      | Default for **Video**: 360 -- Default for **Card**: 220
 **Widget Height**     | Default for **Video**: 480 -- Default for **Card**: 420
 **Responsiveness**    | [Bootstrap-style](http://getbootstrap.com/components/#responsive-embed) 16:9 responsiveness. When enabled, fixed sizing can be ignored. **Default:** False
