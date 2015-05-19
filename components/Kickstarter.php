@@ -40,7 +40,7 @@ class Kickstarter extends ComponentBase
 
             'width' => [
                 'title'             => 'krisawzm.embed::common.properties.width.title',
-                'description'       => 'krisawzm.embed::kickstarter.properties.width.title',
+                'description'       => 'krisawzm.embed::kickstarter.properties.width.description',
                 'default'           => '360',
                 'type'              => 'string',
                 'validationPattern' => '^[0-9]+$',
@@ -49,7 +49,7 @@ class Kickstarter extends ComponentBase
 
             'height' => [
                 'title'             => 'krisawzm.embed::common.properties.height.title',
-                'description'       => 'krisawzm.embed::kickstarter.properties.height.title',
+                'description'       => 'krisawzm.embed::kickstarter.properties.height.description',
                 'default'           => '480',
                 'type'              => 'string',
                 'validationPattern' => '^[0-9]+$',
