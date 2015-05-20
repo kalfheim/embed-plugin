@@ -41,7 +41,7 @@ class Plugin extends PluginBase
         'GooglePlus',
         'Imgur',
         'Instagram',
-        'jsFiddle',
+        'JsFiddle',
         'Kickstarter',
         'SoundCloud',
         'Spotify',
