@@ -15,7 +15,5 @@ class Settings extends Model
 
     public $settingsFields = 'fields.yaml';
 
-    public $rules = [
-        'mode' => 'required',
-    ];
+    public $rules = [];
 }
