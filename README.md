@@ -1,5 +1,9 @@
 Plugin for [OctoberCMS](https://octobercms.com/) which provides easier-than-ever embedding of content from various sites and services. Optimized for [Static Pages](https://octobercms.com/plugin/rainlab-pages). See the [Supported Providers](#supported-providers) list.
 
+![Embed Plugin](http://oc-demo.kadesign.no/themes/oc-demo/assets/images/Embed-Plugin-Banner.png)
+
+<p align="center"><a href="http://oc-demo.kadesign.no/embed"><strong>Live Demo</strong></a> &nbsp; &nbsp; <a href="https://octobercms.com/plugin/krisawzm-embed"><strong>OctoberCMS Marketplace</strong></a></p>
+
 ## Installation
 
 **OctoberCMS Backend:**
