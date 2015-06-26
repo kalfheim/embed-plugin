@@ -18,7 +18,7 @@ return [
     'properties' => [
         'id' => [
             'title'             => 'Видео',
-            'description'       => 'Ссылка Vimeo или ID видео..',
+            'description'       => 'Ссылка Vimeo или ID видео.',
             'validationMessage' => 'Неправльный ID.',
         ],
     ],
