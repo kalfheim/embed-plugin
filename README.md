@@ -213,6 +213,8 @@ If you want to see a provider added to this plugin, don't hesitate to let me kno
 
 Everyting in this plugin can be translated -- even components. If you create a translation for your own language, please give back to the community by creating a pull request!
 
+Thanks to @exotickg1 for providing a Russian translation.
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT) © 2015 [Kristoffer Alfheim](https://github.com/krisawzm)
