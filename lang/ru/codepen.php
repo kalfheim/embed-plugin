@@ -13,7 +13,7 @@
 return [
     'details' => [
         'name'                  => 'CodePen',
-        'description'           => 'Вставляет Pen'ы с CodePen.',
+        'description'           => 'Вставляет Pen с CodePen.',
     ],
     'properties' => [
         'id' => [
