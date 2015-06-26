@@ -13,7 +13,7 @@
 return [
     'details' => [
         'name'                  => 'Kickstarter',
-        'description'           => 'Вставляет проект с Kickstarter'a.',
+        'description'           => 'Вставляет проект с Kickstarter.',
     ],
     'properties' => [
         'url' => [
