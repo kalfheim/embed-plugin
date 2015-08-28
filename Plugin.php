@@ -29,21 +29,9 @@ class Plugin extends PluginBase
      * @var array
      */
     protected $componentList = [
-        'CodePen',
-        'Flickr',
-        'GitHub',
-        'GoogleMaps',
-        'GooglePlus',
-        'Imgur',
-        'Instagram',
-        'JsFiddle',
-        'Kickstarter',
-        'SoundCloud',
-        'Spotify',
-        'Twitter',
-        'Vimeo',
-        'Vine',
-        'YouTube',
+        'CodePen', 'Flickr', 'GitHub', 'GoogleMaps', 'GooglePlus', 'Imgur',
+        'Instagram', 'JsFiddle', 'Kickstarter', 'SoundCloud', 'Spotify',
+        'Twitter', 'Vimeo', 'Vine', 'YouTube',
     ];
 
     /**
