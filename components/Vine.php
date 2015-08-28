@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -66,7 +67,8 @@ class Vine extends ComponentBase
 
         if (strpos($id, 'http') === 0) {
             $path = explode('/', parse_url($id, PHP_URL_PATH));
-            $id = @$path[2];
+
+            return $path[2] ?: '';
         }
 
         return $id;

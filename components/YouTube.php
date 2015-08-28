@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -73,7 +74,7 @@ class YouTube extends ComponentBase
             if ($query) {
                 parse_str($query, $queryData);
 
-                return @$queryData['v'];
+                return $queryData['v'] ?: '';
             }
         }
 

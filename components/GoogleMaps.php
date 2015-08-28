@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 use Krisawzm\Embed\Models\Settings;
@@ -74,9 +75,9 @@ class GoogleMaps extends ComponentBase
      */
     public function src()
     {
-        return 'https://www.google.com/maps/embed/v1/place?key='.
-                Settings::get('googlemaps_api_key', '').
-                '&amp;q='.rawurlencode($this->property('q')).
-                '&amp;maptype='.$this->property('mapType');
+        return 'https://www.google.com/maps/embed/v1/place?key=' .
+                Settings::get('googlemaps_api_key', '') .
+                '&amp;q=' . rawurlencode($this->property('q')) .
+                '&amp;maptype=' . $this->property('mapType');
     }
 }

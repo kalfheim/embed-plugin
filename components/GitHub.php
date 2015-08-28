@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -45,11 +46,10 @@ class GitHub extends ComponentBase
             $path = explode('/', parse_url($id, PHP_URL_PATH));
 
             if (count($path) >= 3) {
-                $id = $path[1].'/'.$path[2];
+                return $path[1] . '/' . $path[2];
             }
-            else {
-                $id = @$path[1];
-            }
+
+            return $path[1] ?: '';
         }
 
         return $id;

@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -69,6 +70,7 @@ class Vimeo extends ComponentBase
 
         if (strpos($id, 'http') === 0) {
             $path = parse_url($id, PHP_URL_PATH);
+
             return current(explode('/', ltrim($path, '/')));
         }
 

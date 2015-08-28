@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -66,6 +67,8 @@ class Kickstarter extends ComponentBase
     public function src()
     {
         $path = rtrim(parse_url($this->property('url'), PHP_URL_PATH), '/');
-        return '//www.kickstarter.com'.$path.'/widget/'.$this->property('type').'.html';
+
+        return '//www.kickstarter.com' . $path . '/widget/' .
+               $this->property('type') . '.html';
     }
 }

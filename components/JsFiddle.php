@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -68,7 +69,9 @@ class JsFiddle extends ComponentBase
         $id = $this->property('id');
 
         if (strpos($id, 'http') === 0) {
-            return current(explode('/', ltrim(parse_url($id, PHP_URL_PATH), '/')));
+            return current(
+                explode('/', ltrim(parse_url($id, PHP_URL_PATH), '/'))
+            );
         }
 
         return $id;

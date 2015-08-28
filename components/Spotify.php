@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -43,7 +44,8 @@ class Spotify extends ComponentBase
 
         if (strpos($id, 'http') === 0) {
             $path = explode('/', parse_url($id, PHP_URL_PATH));
-            return 'spotify:track:'.@$path[2];
+
+            return 'spotify:track:' . ($path[2] ?: '');
         }
 
         return $id;

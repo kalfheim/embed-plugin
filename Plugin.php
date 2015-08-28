@@ -1,19 +1,14 @@
-<?php namespace Krisawzm\Embed;
+<?php
+namespace Krisawzm\Embed;
 
 use System\Classes\PluginBase;
 use Krisawzm\Embed\Models\Settings;
 
 /**
  * Embed Plugin Information File
- *
- * @todo Enable responsiveness on more components?
  */
 class Plugin extends PluginBase
 {
-    // public $suggest = [
-    //     'RainLab.Pages',
-    // ];
-
     /**
      * {@inheritdoc}
      */
@@ -73,15 +68,13 @@ class Plugin extends PluginBase
                 $this->getSettingsList(),
                 'strcasecmp'
             );
-        }
-        elseif ($mode == 'only') {
+        } elseif ($mode == 'only') {
             $componentsTmp = array_uintersect(
                 $this->componentList,
                 $this->getSettingsList(),
                 'strcasecmp'
             );
-        }
-        else {
+        } else {
             $componentsTmp = $this->componentList;
         }
 

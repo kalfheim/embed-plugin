@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -50,7 +51,7 @@ class GooglePlus extends ComponentBase
         $link = ltrim($this->property('link'), 'https:');
 
         if (strpos($link, '//') !== 0) {
-            $link = '//'.$link;
+            return '//' . $link;
         }
 
         return $link;

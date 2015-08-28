@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -43,46 +44,29 @@ class Imgur extends ComponentBase
      * Get the post ID.
      *
      * @return string
-     *
-     * https://imgur.com/gallery/NLitg
-     * https://imgur.com/NLitg
-     *
-     * https://imgur.com/a/1pK8O
      */
     public function pId()
     {
-        static $id = null;
-
-        if (!is_null($id)) {
-            return $id;
-        }
-
         $id = $this->property('id');
 
         if (strpos($id, 'http') === 0) {
             $path = explode('/', parse_url($id, PHP_URL_PATH));
 
-            if ($path[1] == 'gallery') {
-                $id = $path[2];
+            if (!$path) {
+                return $id;
             }
-            elseif ($path[1] == 'a') {
-                $id = 'a/'.$path[2];
+
+            if ($path[1] === 'gallery') {
+                return $path[2] ?: '';
             }
-            else {
-                $id = $path[1];
+
+            if ($path[1] === 'a') {
+               return 'a/' . ($path[2] ?: '');
             }
+
+            return $path[1];
         }
 
         return $id;
     }
-
-    /**
-     * Check if post is an album.
-     *
-     * @return bool
-     */
-    // public function isAlbum()
-    // {
-    //     return strpos($this->id(), 'a/') === 0;
-    // }
 }

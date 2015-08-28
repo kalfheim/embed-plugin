@@ -1,10 +1,11 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
-use Cms\Classes\ComponentBase;
-use Krisawzm\Embed\Models\Settings;
-use October\Rain\Network\Http;
 use Cache;
-use Exception;
+use Cms\Classes\ComponentBase;
+use October\Rain\Network\Http;
+use Krisawzm\Embed\Models\Settings;
+use October\Rain\Exception\ApplicationException;
 
 class SoundCloud extends ComponentBase
 {
@@ -56,11 +57,13 @@ class SoundCloud extends ComponentBase
      * Resolve Track URI using the SoundCloud API.
      *
      * @return string rawurlencoded
+     *
+     * @throws \October\Rain\Exception\ApplicationException
      */
     public function uri()
     {
         $url = $this->property('url');
-        $cacheKey = 'krisawzm_embed_soundcloud_'.md5($url);
+        $cacheKey = 'krisawzm_embed_soundcloud_' . md5($url);
 
         if (Cache::has($cacheKey)) {
             return Cache::get($cacheKey);
@@ -74,26 +77,39 @@ class SoundCloud extends ComponentBase
         });
 
         if ($http->code != 200) {
-            throw new Exception(sprintf('Krisawzm.Embed: SoundCloud API error. Is your Client ID key set? %s', $http->body));
+            throw new ApplicationException(
+                sprintf(
+                    'Embed Plugin: SoundCloud API error. Is your Client ID key set? %s',
+                    $http->body
+                )
+            );
         }
 
         $response = json_decode($http->body, true);
 
         if (!is_array($response)) {
-            throw new Exception('Krisawzm.Embed: SoundCloud API error. Invalid response.');
+            throw new ApplicationException(
+                'Krisawzm.Embed: SoundCloud API error. Invalid response.'
+            );
         }
 
         if (isset($response['error'])) {
-            throw new Exception(sprintf('Krisawzm.Embed: SoundCloud API error: %s', $response['error']));
+            throw new ApplicationException(
+                sprintf(
+                    'Embed Plugin: SoundCloud API error: %s',
+                    $response['error']
+                )
+            );
         }
 
         if (!isset($response['uri']) || !is_string($response['uri'])) {
-            throw new Exception('Krisawzm.Embed: SoundCloud API did not respond with a proper URI.');
+            throw new ApplicationException(
+                'Embed Plugin: SoundCloud API did not respond with a proper URI.'
+            );
         }
 
-        $uri = rawurlencode($response['uri']);
+        Cache::put($cacheKey, $uri = rawurlencode($response['uri']), 4320);
 
-        Cache::put($cacheKey, $uri, 4320);
         return $uri;
     }
 }

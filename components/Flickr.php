@@ -1,4 +1,5 @@
-<?php namespace Krisawzm\Embed\Components;
+<?php
+namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 
@@ -74,6 +75,6 @@ class Flickr extends ComponentBase
             $url = '//'.$url;
         }
 
-        return rtrim($url, '/').'/player/';
+        return rtrim($url, '/') . '/player/';
     }
 }
