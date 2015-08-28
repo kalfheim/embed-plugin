@@ -75,6 +75,6 @@ class Flickr extends ComponentBase
             $url = '//'.$url;
         }
 
-        return rtrim($url, '/') . '/player/';
+        return rtrim(rtrim($url, '/'), '/player/') . '/player/';
     }
 }

@@ -62,7 +62,7 @@ class CodePen extends ComponentBase
         if (strpos($id, 'http') === 0) {
             $path = explode('/', parse_url($id, PHP_URL_PATH));
 
-            return $path[3] ?: '';
+            return @$path[3] ?: '';
         }
 
         return $id;

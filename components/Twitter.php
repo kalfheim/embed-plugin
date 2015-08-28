@@ -50,7 +50,7 @@ class Twitter extends ComponentBase
         $href = ltrim($this->property('href'), 'https:');
 
         if (strpos($href, '//') !== 0) {
-            $href = '//'.$href;
+            $href = '//' . $href;
         }
 
         return $href;

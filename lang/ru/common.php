@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Language File For Krisawzm.Embed Plugin
@@ -10,6 +11,7 @@
 | https://github.com/krisawzm/embed-plugin
 |
 */
+
 return [
     'properties' => [
         'width' => [
