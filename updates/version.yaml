@@ -1,3 +1,4 @@
 1.0.0: 'New providers: CodePen, Flickr, GitHub, GoogleMaps, GooglePlus, Imgur, Instagram, jsFiddle, Kickstarter, SoundCloud, Spotify, Twitter, Vimeo, Vine and YouTube.'
 1.0.1: 'Fixed fatal issue caused by the jsFiddle component.'
 1.0.2: 'Added Russian language.'
+1.0.3: 'Minor improvements.'
