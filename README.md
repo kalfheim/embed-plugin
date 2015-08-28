@@ -4,6 +4,8 @@ Plugin for [OctoberCMS](https://octobercms.com/) which provides easier-than-ever
 
 <p align="center"><a href="http://oc-demo.kadesign.no/embed"><strong>Live Demo</strong></a> &nbsp; &nbsp; <a href="https://octobercms.com/plugin/krisawzm-embed"><strong>OctoberCMS Marketplace</strong></a></p>
 
+[![Build Status](https://travis-ci.org/krisawzm/embed-plugin.svg?branch=master)](https://travis-ci.org/krisawzm/embed-plugin)
+
 ## Installation
 
 **OctoberCMS Backend:**
