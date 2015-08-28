@@ -15,9 +15,9 @@ sudo: false
 
 before_script:
   - git clone https://github.com/octobercms/october.git
-  - mkdir -p ./october/plugins/krisawzm/demomanager
-  - mv !(october) october/plugins/krisawzm/demomanager
+  - mkdir -p ./october/plugins/krisawzm/embed
+  - mv !(october) october/plugins/krisawzm/embed
   - cd october
   - travis_retry composer install --no-interaction --prefer-source
 
-script: vendor/bin/phpunit plugins/krisawzm/demomanager
+script: vendor/bin/phpunit plugins/krisawzm/embed
