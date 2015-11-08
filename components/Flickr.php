@@ -23,12 +23,12 @@ class Flickr extends ComponentBase
     {
         return [
             'url' => [
-                'title'             => 'krisawzm.embed::flickr.properties.width.title',
-                'description'       => 'krisawzm.embed::flickr.properties.width.description',
+                'title'             => 'krisawzm.embed::flickr.properties.url.title',
+                'description'       => 'krisawzm.embed::flickr.properties.url.description',
                 'default'           => 'https://www.flickr.com/photos/tobeelynn/3605080317/',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::flickr.properties.width.validationMessage',
+                'validationMessage' => 'krisawzm.embed::flickr.properties.url.validationMessage',
             ],
 
             'width' => [
