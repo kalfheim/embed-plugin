@@ -4,7 +4,7 @@ Plugin for [OctoberCMS](https://octobercms.com/) which provides easier-than-ever
 
 <p align="center"><a href="http://oc-demo.kadesign.no/embed"><strong>Live Demo</strong></a> &nbsp; &nbsp; <a href="https://octobercms.com/plugin/krisawzm-embed"><strong>OctoberCMS Marketplace</strong></a></p>
 
-[![Build Status](https://travis-ci.org/krisawzm/embed-plugin.svg?branch=master)](https://travis-ci.org/krisawzm/embed-plugin)
+[![Build Status](https://travis-ci.org/kalfheim/embed-plugin.svg?branch=master)](https://travis-ci.org/kalfheim/embed-plugin)
 
 ## Installation
 
@@ -219,4 +219,4 @@ Thanks to @exotickg1 for providing a Russian translation.
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © 2015 [Kristoffer Alfheim](https://github.com/krisawzm)
+[MIT](http://opensource.org/licenses/MIT) © 2016 [Kristoffer Alfheim](https://github.com/kalfheim)
