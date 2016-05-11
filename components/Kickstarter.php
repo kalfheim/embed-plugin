@@ -2,6 +2,8 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Krisawzm\Embed\Models\Settings;
+use Lang;
 
 class Kickstarter extends ComponentBase
 {
@@ -21,6 +23,8 @@ class Kickstarter extends ComponentBase
      */
     public function defineProperties()
     {
+        $css_units = Settings::get('valid_css_units', 'px');
+        
         return [
             'url' => [
                 'title'             => 'krisawzm.embed::kickstarter.properties.url.title',
@@ -28,7 +32,7 @@ class Kickstarter extends ComponentBase
                 'default'           => 'https://',
                 'type'              => 'string',
                 'validationPattern' => '^https?:\/\/(www\.)?kickstarter\.com\/?.+$',
-                'validationMessage' => 'krisawzm.embed::kickstarter.properties.url.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::kickstarter.properties.url.validationMessage'),
             ],
 
             'type' => [
@@ -44,8 +48,8 @@ class Kickstarter extends ComponentBase
                 'description'       => 'krisawzm.embed::kickstarter.properties.width.description',
                 'default'           => '360',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.width.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.width.validationMessage'),
             ],
 
             'height' => [
@@ -53,8 +57,8 @@ class Kickstarter extends ComponentBase
                 'description'       => 'krisawzm.embed::kickstarter.properties.height.description',
                 'default'           => '480',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.height.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.height.validationMessage'),
             ],
         ];
     }

@@ -2,6 +2,7 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Lang;
 
 class Vine extends ComponentBase
 {
@@ -28,7 +29,7 @@ class Vine extends ComponentBase
                 'default'           => '',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::vine.properties.id.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::vine.properties.id.validationMessage'),
             ],
 
             'audio' => [

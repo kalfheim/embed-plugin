@@ -39,5 +39,10 @@ return [
             'label'   => 'SoundCloud Client ID',
             'comment' => 'Не обязательно. Если вы используете SoundCloud Player, и у вас есть специальный Client ID. Смотрите https://developers.soundcloud.com/'
         ],
+
+        'css_units' => [
+            'label'   => 'Поддерживаемые блоки CSS',
+            'comment' => 'Вертикальная черта (| ), разделенных список, содержащий включены CSS единицы измерения для значений ширины и высоты (в дополнение к "auto" и %) . Пример: "px,em"'
+        ],
     ],
 ];

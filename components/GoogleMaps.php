@@ -3,6 +3,7 @@ namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
 use Krisawzm\Embed\Models\Settings;
+use Lang;
 
 class GoogleMaps extends ComponentBase
 {
@@ -22,6 +23,8 @@ class GoogleMaps extends ComponentBase
      */
     public function defineProperties()
     {
+        $css_units = Settings::get('valid_css_units', 'px');
+        
         return [
             'q' => [
                 'title'             => 'krisawzm.embed::googlemaps.properties.q.title',
@@ -29,7 +32,7 @@ class GoogleMaps extends ComponentBase
                 'default'           => 'Oslo, Norway',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::googlemaps.properties.q.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::googlemaps.properties.q.validationMessage'),
             ],
 
             'mapType' => [
@@ -45,8 +48,8 @@ class GoogleMaps extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.width.description',
                 'default'           => '600',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.width.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.width.validationMessage'),
             ],
 
             'height' => [
@@ -54,8 +57,8 @@ class GoogleMaps extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.height.description',
                 'default'           => '450',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.height.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.height.validationMessage'),
             ],
 
             'responsive' => [

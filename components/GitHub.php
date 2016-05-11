@@ -2,6 +2,7 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Lang;
 
 class GitHub extends ComponentBase
 {
@@ -28,7 +29,7 @@ class GitHub extends ComponentBase
                 'default'           => 'krisawzm/0db0766c46a465bb40e8',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::github.properties.id.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::github.properties.id.validationMessage'),
             ],
         ];
     }

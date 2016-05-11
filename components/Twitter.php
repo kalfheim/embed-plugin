@@ -2,6 +2,7 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Lang;
 
 class Twitter extends ComponentBase
 {
@@ -28,7 +29,7 @@ class Twitter extends ComponentBase
                 'default'           => '//twitter.com/rickastley/status/14727077121',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::twitter.properties.href.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::twitter.properties.href.validationMessage'),
             ],
 
             'hideMedia' => [

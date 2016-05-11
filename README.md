@@ -30,6 +30,9 @@ This plugin ships with a settings page. Go to `Settings` and you will see a menu
 
 By default every component will be enabled. This is in most cases unnecessary. Instead, it is recommended to only enable the components you will be needing. To do so, set the `Mode` to either `Use all except the following Embeds:` or `Use only the following Embeds:` -- then specify a comma separated list of component names in the text box under.
 
+You can also specify the allowed CSS units (in addition to _auto_ and _%_) to define `Width/Height` properties on the applicable embeds.
+This is particularly useful if you want to add some '_responsiveness_' to non-responsive embed.
+
 ## Supported Providers
 
 - [CodePen](#codepen)
@@ -56,7 +59,7 @@ Property              | Description
 --------------------- | ---------------------
 **Pen**               | The Pen ID or the full URL copied from the browser address bar. Example: `https://codepen.io/stessyco/pen/noDCi`
 **Default Tab**       | Select which tab shows up by default. **Options:** `Result` `HTML` `JS` `CSS`
-**Widget Height**     | Height of the widget specified in pixels. **Default:** 268
+**Widget Height**     | Height of the widget specified in elegible CSS length value. **Default:** 268
 
 ### Flickr
 
@@ -65,8 +68,8 @@ Embed any Flickr URL. This includes links to photos, albums and user profiles.
 Property              | Description
 --------------------- | ---------------------
 **URL**               | The full Flickr.com URL.
-**Widget Width**      | Width of the widget specified in pixels. **Default:** 640
-**Widget Height**     | Height of the widget specified in pixels. **Default:** 426
+**Widget Width**      | Width of the widget specified in elegible CSS length value. **Default:** 640
+**Widget Height**     | Height of the widget specified in elegible CSS length value. **Default:** 426
 **Responsiveness**    | [Click here for details.](#responsiveness) **Default:** False
 
 ### GitHub Gist
@@ -81,8 +84,8 @@ Property              | Description
 --------------------- | ---------------------
 **Place**             | The place you want to display on the Map. Accepts any Google Maps search query. Eg: `Oslo, Norway`
 **Map Type**          | Type of map to display. **Options:** `Roadmap` `Satellite`
-**Widget Width**      | Width of the widget specified in pixels. **Default:** 600
-**Widget Height**     | Height of the widget specified in pixels. **Default:** 450
+**Widget Width**      | Width of the widget specified in elegible CSS length value. **Default:** 600
+**Widget Height**     | Height of the widget specified in elegible CSS length value. **Default:** 450
 
 > **Important note:** The Google Maps component requires a API key. Get your key from [Google Developers](https://developers.google.com/maps/documentation/embed/guide#api_key) and register it in the settings page.
 
@@ -117,7 +120,7 @@ Property              | Description
 **jsFiddle**          | The ID or full URL of the fiddle you wish to display. Eg: `https://jsfiddle.net/id/`
 **Tabs**              | Remove or rearrange tabs. **Default:** `js,resources,html,css,result`
 **Skin**              | Which skin should be used. **Options**: `Light` `Presentation`
-**Height**            | Height of the widget specified in pixels. **Default:** 300
+**Height**            | Height of the widget specified in elegible CSS length value. **Default:** 300
 
 ### Kickstarter
 
@@ -138,7 +141,7 @@ Property              | Description
 --------------------- | ---------------------
 **URL**               | Full SoundCloud URL copied from the browser address bar.
 **Auto Play**         | Play begin playback when the widget loads. **Default:** False
-**Widget Height**     | Height of the widget specified in pixels. **Default**: 166
+**Widget Height**     | Height of the widget specified in elegible CSS length value. **Default**: 166
 
 > **Note:** When embedding a playlist or user profile, you must increase the `Widget Height` to display the playlist.
 
@@ -151,6 +154,8 @@ Embed a Spotify Play Button.
 Property              | Description
 --------------------- | ---------------------
 **Track**             | The Spotify URI. Right click on a track -> `Copy Spotify URI`. Also accepts the Spotify HTTP URL.
+**Widget Width**      | Width of the widget specified in elegible CSS length value. **Default**: 300
+**Widget Height**     | Height of the widget specified in elegible CSS length value. **Default**: 380
 
 ### Twitter
 

@@ -2,6 +2,8 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Krisawzm\Embed\Models\Settings;
+use Lang;
 
 class JsFiddle extends ComponentBase
 {
@@ -21,6 +23,7 @@ class JsFiddle extends ComponentBase
      */
     public function defineProperties()
     {
+        $css_units = Settings::get('valid_css_units', 'px');
         return [
             'id' => [
                 'title'             => 'krisawzm.embed::jsfiddle.properties.id.title',
@@ -28,7 +31,7 @@ class JsFiddle extends ComponentBase
                 'default'           => 'dwqujux4',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::jsfiddle.properties.id.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::jsfiddle.properties.id.validationMessage'),
             ],
 
             'tabs' => [
@@ -37,7 +40,7 @@ class JsFiddle extends ComponentBase
                 'default'           => 'js,resources,html,css,result',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::jsfiddle.properties.tabs.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::jsfiddle.properties.tabs.validationMessage'),
             ],
 
             'skin' => [
@@ -53,8 +56,8 @@ class JsFiddle extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.height.description',
                 'default'           => '300',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.height.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.height.validationMessage'),
             ],
         ];
     }

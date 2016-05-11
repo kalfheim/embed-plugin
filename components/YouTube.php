@@ -2,6 +2,8 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Krisawzm\Embed\Models\Settings;
+use Lang;
 
 class YouTube extends ComponentBase
 {
@@ -21,6 +23,8 @@ class YouTube extends ComponentBase
      */
     public function defineProperties()
     {
+        $css_units = Settings::get('valid_css_units', 'px');
+        
         return [
             'id' => [
                 'title'             => 'krisawzm.embed::youtube.properties.id.title',
@@ -28,7 +32,7 @@ class YouTube extends ComponentBase
                 'default'           => 'dQw4w9WgXcQ',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::youtube.properties.id.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::youtube.properties.id.validationMessage'),
             ],
 
             'width' => [
@@ -36,8 +40,8 @@ class YouTube extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.width.description',
                 'default'           => '560',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.width.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.width.validationMessage'),
             ],
 
             'height' => [
@@ -45,8 +49,8 @@ class YouTube extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.height.description',
                 'default'           => '315',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.height.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.height.validationMessage'),
             ],
 
             'responsive' => [

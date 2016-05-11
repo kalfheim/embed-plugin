@@ -2,6 +2,8 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Krisawzm\Embed\Models\Settings;
+use Lang;
 
 class CodePen extends ComponentBase
 {
@@ -21,6 +23,7 @@ class CodePen extends ComponentBase
      */
     public function defineProperties()
     {
+        $css_units = Settings::get('valid_css_units', 'px');
         return [
             'id' => [
                 'title'             => 'krisawzm.embed::codepen.properties.id.title',
@@ -28,7 +31,7 @@ class CodePen extends ComponentBase
                 'default'           => 'noDCi',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::codepen.properties.id.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::codepen.properties.id.validationMessage'),
             ],
 
             'defaultTab' => [
@@ -44,8 +47,8 @@ class CodePen extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.height.description',
                 'default'           => '268',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.height.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.height.validationMessage'),
             ],
         ];
     }
