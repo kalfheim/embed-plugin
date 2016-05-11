@@ -40,7 +40,7 @@ class Flickr extends ComponentBase
                 'default'           => '640',
                 'type'              => 'string',
                 'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
-                'validationMessage' => 'Wkrisawzm.embed::common.properties.width.validationMessage'),
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.width.validationMessage'),
             ],
 
             'height' => [
