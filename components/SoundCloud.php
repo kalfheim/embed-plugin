@@ -3,9 +3,10 @@ namespace Krisawzm\Embed\Components;
 
 use Cache;
 use Cms\Classes\ComponentBase;
-use October\Rain\Network\Http;
 use Krisawzm\Embed\Models\Settings;
+use Lang;
 use October\Rain\Exception\ApplicationException;
+use October\Rain\Network\Http;
 
 class SoundCloud extends ComponentBase
 {
@@ -25,6 +26,7 @@ class SoundCloud extends ComponentBase
      */
     public function defineProperties()
     {
+        $css_units = Settings::get('valid_css_units', 'px');
         return [
             'url' => [
                 'title'             => 'krisawzm.embed::soundcloud.properties.url.title',
@@ -32,7 +34,7 @@ class SoundCloud extends ComponentBase
                 'default'           => 'https://',
                 'type'              => 'string',
                 'validationPattern' => '^https?:\/\/soundcloud\.com\/?.+$',
-                'validationMessage' => 'krisawzm.embed::soundcloud.properties.url.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::soundcloud.properties.url.validationMessage'),
             ],
 
             'autoPlay' => [
@@ -47,8 +49,8 @@ class SoundCloud extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.height.title',
                 'default'           => '166',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.height.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.height.validationMessage'),
             ],
         ];
     }

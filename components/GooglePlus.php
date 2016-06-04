@@ -2,6 +2,7 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Lang;
 
 class GooglePlus extends ComponentBase
 {
@@ -28,7 +29,7 @@ class GooglePlus extends ComponentBase
                 'default'           => 'https://',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::googleplus.properties.link.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::googleplus.properties.link.validationMessage'),
             ],
         ];
     }

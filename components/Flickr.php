@@ -2,6 +2,8 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Krisawzm\Embed\Models\Settings;
+use Lang;
 
 class Flickr extends ComponentBase
 {
@@ -21,6 +23,7 @@ class Flickr extends ComponentBase
      */
     public function defineProperties()
     {
+        $css_units = Settings::get('valid_css_units', 'px');
         return [
             'url' => [
                 'title'             => 'krisawzm.embed::flickr.properties.url.title',
@@ -28,7 +31,7 @@ class Flickr extends ComponentBase
                 'default'           => 'https://www.flickr.com/photos/tobeelynn/3605080317/',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::flickr.properties.url.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::flickr.properties.url.validationMessage'),
             ],
 
             'width' => [
@@ -36,8 +39,8 @@ class Flickr extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.width.description',
                 'default'           => '640',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Wkrisawzm.embed::common.properties.width.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.width.validationMessage'),
             ],
 
             'height' => [
@@ -45,8 +48,8 @@ class Flickr extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.height.description',
                 'default'           => '426',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.height.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.height.validationMessage'),
             ],
 
             'responsive' => [

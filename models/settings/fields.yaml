@@ -29,3 +29,10 @@ fields:
         label: krisawzm.embed::lang.settings.soundcloud_client_id.label
         type: text
         comment: krisawzm.embed::lang.settings.soundcloud_client_id.comment
+
+    valid_css_units:
+        label: krisawzm.embed::lang.settings.css_units.label
+        type: text
+        commnent: krisawzm.embed::lang.settings.css_units.comment
+        placeholder: em|ex|ch|rem|cm|mm|q|in|pt|pc|px|vw|vh|vmin|vmax
+        default: em|ex|ch|rem|cm|mm|q|in|pt|pc|px|vw|vh|vmin|vmax

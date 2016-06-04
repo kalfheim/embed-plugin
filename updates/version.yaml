@@ -3,3 +3,7 @@
 1.0.2: 'Added Russian language.'
 1.0.3: 'Minor improvements.'
 1.0.4: 'Fixed issue with the Flickr component.'
+1.0.5:
+    - Included height and width options for Spotify component
+    - Extended width and height validations to allow auto, % and floating point values
+    - Added setting to allow configuration of additional valid CSS Units for width and height definition.

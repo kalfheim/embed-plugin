@@ -2,6 +2,8 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Krisawzm\Embed\Models\Settings;
+use Lang;
 
 class Instagram extends ComponentBase
 {
@@ -21,6 +23,8 @@ class Instagram extends ComponentBase
      */
     public function defineProperties()
     {
+        $css_units = Settings::get('valid_css_units', 'px');
+        
         return [
             'id' => [
                 'title'             => 'krisawzm.embed::instagram.properties.id.title',
@@ -28,7 +32,7 @@ class Instagram extends ComponentBase
                 'default'           => 'tWdDeNImrp',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::instagram.properties.id.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::instagram.properties.id.validationMessage'),
             ],
 
             'width' => [
@@ -36,8 +40,8 @@ class Instagram extends ComponentBase
                 'description'       => 'krisawzm.embed::common.properties.width.description',
                 'default'           => '350',
                 'type'              => 'string',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'krisawzm.embed::common.properties.width.validationMessage',
+                'validationPattern' => '^(auto|0)$|^\d+(\.\d+)?(%|'.$css_units.')?$',
+                'validationMessage' => Lang::get('krisawzm.embed::common.properties.width.validationMessage'),
             ],
 
             'caption' => [

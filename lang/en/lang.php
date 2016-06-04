@@ -44,5 +44,11 @@ return [
             'label'   => 'SoundCloud Client ID',
             'comment' => 'Optional. If you\'re using the SoundCloud Player, you\'ll have to specify a CLient ID. See https://developers.soundcloud.com/'
         ],
+
+        'css_units' => [
+            'label'   => 'Supported CSS units',
+            'comment' => 'Pipe (|) separated list containing enabled CSS units for width and height values (In addition to "auto" and %). Example: "px,em"'
+        ],
+
     ],
 ];

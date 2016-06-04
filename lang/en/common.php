@@ -16,14 +16,14 @@ return [
     'properties' => [
         'width' => [
             'title'             => 'Widget Width',
-            'description'       => 'Widget Width in pixels.',
-            'validationMessage' => 'Widget Width must be a number.',
+            'description'       => 'Widget Width in valid CSS value.',
+            'validationMessage' => 'Widget Width must use a valid CSS unit',
         ],
 
         'height' => [
             'title'             => 'Widget Height',
-            'description'       => 'Widget Height in pixels.',
-            'validationMessage' => 'Widget Height must be a number.',
+            'description'       => 'Widget Height in valid CSS value.',
+            'validationMessage' => 'Widget Width must use a valid CSS unit',
         ],
 
         'responsive' => [

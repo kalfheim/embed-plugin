@@ -2,6 +2,7 @@
 namespace Krisawzm\Embed\Components;
 
 use Cms\Classes\ComponentBase;
+use Lang;
 
 class Imgur extends ComponentBase
 {
@@ -28,7 +29,7 @@ class Imgur extends ComponentBase
                 'default'           => 'NLitg',
                 'type'              => 'string',
                 'validationPattern' => '^.*$',
-                'validationMessage' => 'krisawzm.embed::imgur.properties.id.validationMessage',
+                'validationMessage' => Lang::get('krisawzm.embed::imgur.properties.id.validationMessage'),
             ],
 
             'hideDetails' => [
